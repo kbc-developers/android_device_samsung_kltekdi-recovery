@@ -4,7 +4,7 @@ USE_CAMERA_STUB := true
 -include vendor/samsung/klte/BoardConfigVendor.mk
 
 TARGET_NO_BOOTLOADER := true
-TARGET_BOOTLOADER_BOARD_NAME := klte
+TARGET_BOOTLOADER_BOARD_NAME := kltekdi
 
 # Platform
 TARGET_BOARD_PLATFORM := msm8974
@@ -28,7 +28,7 @@ BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
 BOARD_KERNEL_CMDLINE :=  console=null androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 enforcing=0
 BOARD_KERNEL_BASE :=  0x00000000
 BOARD_KERNEL_PAGESIZE := 2048
-BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --dt device/samsung/klte/dtb --tags_offset 0x01e00000
+BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --dt device/samsung/kltekdi/dtb --tags_offset 0x01e00000
 
 BOARD_BOOTIMAGE_PARTITION_SIZE :=     0x105c0000
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x00D00000
@@ -36,7 +36,7 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 0x105c0000
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 0x105c0000
 BOARD_FLASH_BLOCK_SIZE := 131072
 
-TARGET_PREBUILT_KERNEL := device/samsung/klte/kernel
+TARGET_PREBUILT_KERNEL := device/samsung/kltekdi/kernel
 
 # Use this flag if the board has a ext4 partition larger than 2gb
 BOARD_HAS_LARGE_FILESYSTEM := true
@@ -61,4 +61,4 @@ TW_NO_EXFAT := false
 GET_RECOVERY_QCOM_RTC_FIX := true
 TW_EXCLUDE_MTP := true
 # LZMA ramdisk
-BOARD_CUSTOM_BOOTIMG_MK := device/samsung/klte/custombootimg.mk
+BOARD_CUSTOM_BOOTIMG_MK := device/samsung/kltekdi/custombootimg.mk

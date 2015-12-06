@@ -5,9 +5,9 @@ $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
 $(call inherit-product-if-exists, vendor/samsung/klte/klte-vendor.mk)
 
-DEVICE_PACKAGE_OVERLAYS += device/samsung/klte/overlay
+DEVICE_PACKAGE_OVERLAYS += device/samsung/kltekdi/overlay
 
-LOCAL_PATH := device/samsung/klte
+LOCAL_PATH := device/samsung/kltekdi
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 	LOCAL_KERNEL := $(LOCAL_PATH)/kernel
 else
@@ -29,5 +29,5 @@ PRODUCT_COPY_FILES += \
 
 $(call inherit-product, build/target/product/full.mk)
 
-PRODUCT_NAME := samsung_klte
+PRODUCT_NAME := samsung_kltekdi
 PRODUCT_BRAND := Samsung
